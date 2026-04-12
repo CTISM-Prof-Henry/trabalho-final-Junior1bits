@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* HEADER */
+header {
+    padding: 20px;
+    text-align: center;
+    background: black;
+}
+
+header h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #c77dff;
+
+    text-shadow:
+            0 0 5px #a020f0,
+            0 0 10px #a020f0,
+            0 0 20px #a020f0,
+            0 0 40px #7b2cbf;
+}
+
+/* BANNER */
+.banner {
+    height: 450px;
+
+    background:
+            linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+            url('../images/next-level.png');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.banner-content button {
+    padding: 12px 25px;
+    border: none;
+    background: purple;
+    color: white;
+    cursor: pointer;
+}
+
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background: purple;
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+.produto-detalhe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.produto-detalhe .imagem img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.produto-detalhe .info {
+    max-width: 400px;
+}
+
+.produto-detalhe h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.preco {
+    font-size: 24px;
+    color: #a020f0;
+    margin-bottom: 20px;
+}
+
+.produto-detalhe button {
+    padding: 12px 25px;
+    background: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
