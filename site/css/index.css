@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Exo 2', sans-serif;
-    background-color: #111;
+    background-color: #0d0d0d;
     color: white;
 }
 
@@ -33,13 +33,11 @@ header h1 {
 
 /* BANNER */
 .banner {
-    height: 450px;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+                url('../images/next-level.png');
 
-    background:
-            linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-            url('../images/next-level.png');
-
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -51,36 +49,40 @@ header h1 {
 
 .banner-content h2 {
     font-size: 40px;
-    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .banner-content p {
-    margin-bottom: 20px;
     color: #ccc;
 }
 
 .banner-content button {
     padding: 12px 25px;
     border: none;
-    background: purple;
+    background: #6a0dad;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* PRODUTOS */
-.produtos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
+/* HOVER BOTÃO */
+button:hover {
+    background: #8a2be2;
+    transform: scale(1.05);
 }
 
+/* HOVER CARD */
+.card:hover {
+    transform: translateY(-5px);
+}
 .card {
     background: #1a1a1a;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     width: 200px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
 }
 
 .card img {
@@ -94,7 +96,7 @@ header h1 {
     margin-top: 10px;
     padding: 8px;
     border: none;
-    background: purple;
+    background: #6a0dad;
     color: white;
     cursor: pointer;
 }
@@ -104,6 +106,14 @@ footer {
     text-align: center;
     padding: 20px;
     background: black;
+}
+
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
 }
 
 .produto-detalhe {
@@ -142,7 +152,7 @@ footer {
 
 .produto-detalhe button {
     padding: 12px 25px;
-    background: purple;
+    background: #6a0dad;
     color: white;
     border: none;
     cursor: pointer;
