@@ -37,7 +37,7 @@ header h1 {
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
                 url('../images/next-level.png');
 
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -94,6 +94,7 @@ button:hover {
 
 .card button {
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 8px;
     border: none;
     background: #6a0dad;
@@ -104,6 +105,7 @@ button:hover {
 /* FOOTER */
 footer {
     text-align: center;
+
     padding: 20px;
     background: black;
 }
@@ -157,4 +159,10 @@ footer {
     border: none;
     cursor: pointer;
     font-weight: bold;
+}
+
+.voltar {
+    display: flex;
+    justify-content: flex-start;
+
 }
