@@ -1,168 +1,153 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Exo 2', sans-serif;
-    background-color: #0d0d0d;
-    color: white;
-}
-
-/* HEADER */
+/*cabeçalho*/
 header {
+    display: flex;                              /*coloca tudo na mesma linha*/
+    justify-content: space-between;            /* separa os itens*/
+    align-items: flex-start;                  /*alinha verticalmente*/
+
+    background: #0d0d0d;
     padding: 20px;
-    text-align: center;
-    background: black;
+    border-bottom: 1px solid #222;
+
 }
 
-header h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: #c77dff;
-
-    text-shadow:
-            0 0 5px #a020f0,
-            0 0 10px #a020f0,
-            0 0 20px #a020f0,
-            0 0 40px #7b2cbf;
+h1 {
+    color: white;
+    font-size: 24px;
 }
 
-/* BANNER */
-.banner {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-                url('../images/next-level.png');
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/*navegação*/
+nav {
+    margin-top: 55px;
+}
+nav a {
+    color: white;
+    align-items: flex-start;
+    margin: 20px;              /*espaçamento entre eles*/
+    text-decoration: none;
 }
 
-.banner-content h2 {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.banner-content p {
-    color: #ccc;
-}
-
-.banner-content button {
-    padding: 12px 25px;
+/*barra de pesquisa*/
+input {
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 20px;
     border: none;
+}
+
+/*banner*/
+.banner {
+    display: flex;                  /* ativa o modo flex */
+    flex-direction: column;        /* coloca um embaixo do outro */
+
+    justify-content: center;     /* centraliza vertical */
+    align-items: center;        /* centraliza horizontal */
+
+    height: 90vh;             /* ocupa a tela */
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.banner h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.banner p {
+    margin-bottom: 20px;
+}
+
+/*botão no banner*/
+.banner button {
+    padding: 12px 25px;
     background: #6a0dad;
+    border: none;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
-/* HOVER BOTÃO */
-button:hover {
-    background: #8a2be2;
-    transform: scale(1.05);
-}
-
-/* HOVER CARD */
-.card:hover {
-    transform: translateY(-5px);
-}
-.card {
-    background: #1a1a1a;
-    padding: 20px;
+.destaque h1 {
+    color:  #a020f0;
+    font-size:40px;
     text-align: center;
-    border-radius: 10px;
-    width: 200px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    transition: 0.3s;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*-------------------------------------------livros - produtos-------------------------------------------*/
+.livros {      /*caixa dos livros*/
+    display: flex;                                 /*coloca todos os cards lado a lado*/
+    flex-wrap: wrap;
+    justify-content: center;                     /*centraliza os livros*/
+    gap: 20px;                                  /*espaço ENTRE os cards */
+    padding: 40px;                             /*espaço dentro da seção (afasta das bordas)*/
+}
+
+.card {         /*cada livro*/
+    background: #1a1a1a;                               /*cor de fundo do card*/
+    padding: 20px;                                    /*espaço interno (não deixa tudo colado)*/
+    border-radius: 10px;                             /*bordas arredondadas*/
+    width: 200px;                                   /*largura fixa do card*/
+    text-align: center;                            /*centraliza o texto dentro dele*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);       /*cria uma sombra embaixo do card*/
 }
 
 .card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%;                         /*imagem ocupa toda largura do card*/
+    height: 250px;
+    object-fit: cover;                 /*ajusta a imagem sem distorcer*/
+    border-radius: 8px;               /* deixa a imagem arredondada*/
+    transition: 0.3s;
+}
+.card img:hover {
+    transform: scale(1.05);
 }
 
-.card button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: none;
-    background: #6a0dad;
+.card h3 {
+    margin: 10px 0;
+}
+
+h3 {
     color: white;
-    cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-
-    padding: 20px;
-    background: black;
-}
-
-/* PRODUTOS */
-.produtos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-}
-
-.produto-detalhe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    padding: 60px;
-    flex-wrap: wrap;
-}
-
-.produto-detalhe .imagem img {
-    width: 350px;
-    border-radius: 10px;
-}
-
-.produto-detalhe .info {
-    max-width: 400px;
-}
-
-.produto-detalhe h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.descricao {
+.card p {
     color: #ccc;
-    margin-bottom: 20px;
 }
 
 .preco {
-    font-size: 24px;
     color: #a020f0;
-    margin-bottom: 20px;
-}
-
-.produto-detalhe button {
-    padding: 12px 25px;
-    background: #6a0dad;
-    color: white;
-    border: none;
-    cursor: pointer;
     font-weight: bold;
+    margin: 10px 0;
 }
 
-.voltar {
-    display: flex;
-    justify-content: flex-start;
+/*BOTÃO DE COMPRA*/
+.card button {
+    padding: 10px;
+    background: #6a0dad;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+/*-------------------------------ANIMAÇÃO DOS BOTÕES------------------------------------*/
+.card {
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+.card button:hover {
+    background: #8a2be2;
+}
+.banner button:hover {
+    background: #8a2be2;
+    transform: scale(1.05);
+}
+nav a:hover {
+    color: #a020f0;
 }

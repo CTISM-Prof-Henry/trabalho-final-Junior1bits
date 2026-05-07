@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXT LEVEL</title>
+    <title>BookZone</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
@@ -12,55 +12,65 @@
 <body>
 
 <header>
-    <h1>NEXT LEVEL</h1>
+    <h1>BookZone</h1>
+
+    <nav>                                                   <!-- MENU DE NAVEGAÇÃO -->
+        <a href="#">Início</a>
+        <a href="#">Livros</a>
+        <a href="#">Categorias</a>
+    </nav>
+
+    <input type="text" placeholder="Buscar livros...">        <!-- BARRA DE PESQUISA -->
 </header>
 
+    <section class="banner">
+        <h2>Descubra novos mundos através da leitura.</h2>
+            <p>Os melhores livros em um só lugar.</p>
+                <button>Explorar coleção</button>
+    </section>
 
-<section class="banner">
-    <div class="banner-content">
-        <h2>Seu estilo no<br>proximo nível.</h2>
-        <p>Descubra a nova coleção 2026</p>
-        <br><br>
-        <a href="#produtos">
-            <button>Ver produtos</button>
-        </a>
+        <section class="destaque">
+            <h1>DESTAQUES DO MÊS!</h1>
+        </section>
+
+<section class="livros">                                             <!-- LIVROS -->
+
+    <div class="card">
+        <img src="images/livro1.jpg" alt="Livro 1">
+        <h3>A Biblioteca da Meia-Noite</h3>
+        <p>Matt Haig</p>
+        <p class="preco">R$ 49,90</p>
+        <button>Comprar</button>
     </div>
+
+    <div class="card">
+        <img src="images/livro2.jpg" alt="Livro 2">
+        <h3>A culpa é das estrelas</h3>
+        <p>John Green</p>
+        <p class="preco">R$ 39,90</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="images/livro3.jpg" alt="Livro 3">
+        <h3>O homem de giz</h3>
+        <p>C. J. Tudor</p>
+        <p class="preco">R$ 59,90</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card">
+        <img src="images/livro4.jpg" alt="Livro 4">
+        <h3>O Que Está Lá Fora</h3>
+        <p> Kate Alice Marshall</p>
+        <p class="preco">R$ 49,90</p>
+        <button>Comprar</button>
+    </div>
+
 </section>
 
-<section class="produtos" id="produtos">
-
-    <div class="card">
-        <img src="images/camisa-social-next.png" alt="Camisa social preta NEXT">
-        <h3>Camisa NEXT Social</h3>
-        <p>R$ 129,90</p>
-        <a href="pages/camisa-social-next.html">
-            <button>Comprar</button>
-        </a>
-    </div>
-
-    <div class="card">
-        <img src="images/camisa-street-next.png" alt="Camisa street NEXT">
-        <h3>Camisa NEXT Street</h3>
-        <p>R$ 99,90</p>
-        <a href="pages/camisa-street-next.html">
-            <button>Comprar</button>
-        </a>
-    </div>
-
-    <div class="card">
-        <img src="images/camisa-basica-next.png" alt="Camisa básica NEXT">
-        <h3>Camisa NEXT Básica</h3>
-        <p>R$ 79,90</p>
-        <a href="pages/camisa-basica-next.html">
-            <button>Comprar</button>
-        </a>
-    </div>
-
-</section>
-
-<footer>
-    <p>© 2026 - NEXT LEVEL</p>
-</footer>
 
 </body>
 </html>
+
+
