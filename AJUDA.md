@@ -14,8 +14,8 @@ https://www.youtube.com/embed/sAPe1sTnub8?si=9COTt6Obe1noc38F&amp;clip=UgkxVMGkw
 
 > [!NOTE]
 > Caso a tela do vídeo acima não apareça para você, você pode abrir o projeto indo no Menu `File` e clicando em `Open...`:
-> ![load_1](site/images/load_1.png)
-> ![load_2](site/images/load_2.png)
+> ![load_1](trabalho-final-Junior1bits-main/site/images/load_1.png)
+> ![load_2](trabalho-final-Junior1bits-main/site/images/load_2.png)
 
 ## Como fazer upload de arquivos para o GitHub
 
