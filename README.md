@@ -21,15 +21,15 @@ O projeto deve ser publicado no **GitHub Pages** e apresentado em aula para o pr
 * [x] estou ciente que, se eu modificar ou excluir arquivos que não estejam na pasta `site` 
       (por exemplo, `.github` ou `README.md`), isso pode afetar o funcionamento do meu site
 * [ ] respondi todas as perguntas e preenchi todos os checkboxes abaixo
-* [ ] meu site está hospedado no GitHub Pages, no link https://ctism-prof-henry.github.io/trabalho-final-Junior1bits/`<escreva aqui o link do seu site>`
+* [x] meu site está hospedado no GitHub Pages, no link https://ctism-prof-henry.github.io/trabalho-final-Junior1bits/`<escreva aqui o link do seu site>`
 
 ## 📖 Descrição do projeto
 
 Descreva abaixo **sobre o que se trata seu site:**
 
-- **Tema: Loja de camisas.**
-- **Público-alvo: pessoas entre 16-30 anos.**
-- **Funcionalidades: Compras e visualização de produtos.**
+- **Tema: Livraria online (BookZone)**
+- **Público-alvo: Leitores de todas as idades**
+- **Funcionalidades: Visualização de livros em promoção, categorias (Ficção, Drama, Lançamentos), cards interativos com hover, barra de busca (visual), navegação por âncoras**
 
 ## Uso de IA
 
@@ -60,8 +60,8 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 #### Estrutura semântica
 
 - [x] `<header>`
-- [ ] `<nav>`
-- [ ] `<main>`
+- [x] `<nav>`
+- [x] `<main>`
 - [x] `<section>`
 - [ ] `<article>`
 - [ ] `<aside>`
@@ -80,7 +80,7 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 #### Formulários
 
 - [ ] `<form>`
-- [ ] `<input>`
+- [x] `<input>`
 - [ ] `<label>`
 - [ ] `<textarea>`
 - [x] `<button>`
@@ -90,14 +90,14 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 - Seletor de...
   - [x] Classes (`.classe`)
   - [x] IDs (`#id`)
-  - [ ] pseudoclasse (`#a::hover`)
+  - [x] pseudoclasse (`#a::hover`)
 - [x] Cores
 - [x] Tipografia (e.g. `font-family`)
 - [x] Margem e padding
 - [x] Layout com `flexbox`
 - [ ] Layout com `grid`
-- [ ] Responsividade (`media queries`)
-- [ ] Animações ou transições
+- [x] Responsividade (`media queries`)
+- [x] Animações ou transições
 
 ## ⚙️ JavaScript
 
@@ -138,8 +138,11 @@ site/
 
 ## 💡 Observações
 
-Utilize este espaço para comentar:
+Utilize este espaço para comentar: 
+      Utilizei as IA's DeepSeek, Gemini, Figma (para ideias visuais) e ChatGPT para me auxiliar no desenvolvimento do meu site. Fiz perguntas sobre como melhorar o layout, alinhar botões, corrigir erros no HTML/CSS, e entender alguns conceitos. A IA me ajudou com sugestões de ideias, explicações e várias correções, mas a implementação final foi feita por mim.
 
 - dificuldades encontradas
+        
 - decisões de design
+  
 - melhorias que podem ser feitas no futuro
