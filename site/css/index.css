@@ -1,153 +1,308 @@
-/*cabeçalho*/
+/*------------------------------------------- RESET -------------------------------------------*/
+* {
+    margin: 0;                      /* remove margem padrão de todos os elementos */
+    padding: 0;                     /* remove espaçamento interno padrão */
+    box-sizing: border-box;         /* faz largura/altura incluírem bordas e padding */
+}
+
+/*------------------------------------------- FUNDO -------------------------------------------*/
+body {
+    font-family: 'Exo 2', sans-serif;    /* define a fonte do site */
+    background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d5 100%);   /* fundo gradiente suave (évita área branca) */
+    min-height: 100vh;                   /* garante que o fundo cubra a tela toda */
+}
+
+/*------------------------------------------- CABEÇALHO -------------------------------------------*/
 header {
-    display: flex;                              /*coloca tudo na mesma linha*/
-    justify-content: space-between;            /* separa os itens*/
-    align-items: flex-start;                  /*alinha verticalmente*/
-
-    background: #0d0d0d;
-    padding: 20px;
-    border-bottom: 1px solid #222;
-
+    display: flex;                                /* coloca logo, menu e busca na mesma linha */
+    justify-content: space-between;              /* espaça os itens (um no início, um no meio, um no fim) */
+    align-items: center;                        /* alinha tudo verticalmente no centro */
+    background: #0d0d0d;                       /* fundo preto do cabeçalho */
+    padding: 20px 40px;                       /* espaçamento interno (20px cima/baixo, 40px laterais) */
+    border-bottom: 1px solid #222;           /* linha fina na parte inferior */
+    flex-wrap: wrap;                        /* permite que os itens quebrem linha em telas pequenas */
+    gap: 15px;                             /* espaçamento entre os itens */
+    position: sticky;                     /* fixa o cabeçalho no topo ao rolar a página */
+    top: 0;                              /* posição no topo */
+    z-index: 1000;                      /* garante que o cabeçalho fique sobre outros elementos */
 }
 
 h1 {
-    color: white;
-    font-size: 24px;
+    color: white;                             /* cor branca para o texto */
+    font-size: 28px;                         /* tamanho da fonte */
+    letter-spacing: 2px;                    /* espaçamento entre letras */
+    background: linear-gradient(135deg, #fff, #a020f0);   /* gradiente de branco para roxo */
+    -webkit-background-clip: text;        /* aplica o gradiente APENAS no texto (chrome/safari) */
+    background-clip: text;               /* aplica o gradiente apenas no texto */
+    color: transparent;                 /* esconde a cor original para ver o gradiente */
 }
 
-/*navegação*/
+/*------------------------------------------- NAVEGAÇÃO -------------------------------------------*/
 nav {
-    margin-top: 55px;
+    display: flex;                        /* coloca os links do menu lado a lado */
+    gap: 10px;                           /* espaçamento entre os links */
+    flex-wrap: wrap;                    /* quebra linha em telas pequenas se necessário */
 }
+
 nav a {
-    color: white;
-    align-items: flex-start;
-    margin: 20px;              /*espaçamento entre eles*/
-    text-decoration: none;
+    color: white;                            /* cor do texto do link */
+    text-decoration: none;                  /* remove o sublinhado padrão */
+    padding: 8px 15px;                     /* espaçamento interno (8px cima/baixo, 15px laterais) */
+    transition: 0.3s;                     /* tempo da animação de hover */
+    font-weight: 500;                    /* peso da fonte (semi-negrito) */
+    border-radius: 5px;                 /* bordas levemente arredondadas */
 }
 
-/*barra de pesquisa*/
+nav a:hover {
+    color: #a020f0;                         /* muda a cor para roxo ao passar o mouse */
+    background: rgba(160, 32, 240, 0.1);   /* fundo roxo bem fraco ao passar o mouse */
+    transform: translateY(-2px);          /* sobe o link 2 pixels ao passar o mouse */
+}
+
+/*------------------------------------------- BARRA DE PESQUISA -------------------------------------------*/
 input {
-    padding: 8px;
-    margin-top: 15px;
-    border-radius: 20px;
-    border: none;
+    padding: 10px 20px;                       /* espaçamento interno (10px cima/baixo, 20px laterais) */
+    width: 250px;                            /* largura fixa de 250 pixels */
+    background: #1a1a1a;                    /* fundo cinza escuro */
+    color: white;                          /* texto branco */
+    border: 1px solid #333;               /* borda cinza de 1 pixel */
+    border-radius: 25px;                 /* bordas bem arredondadas (efeito de pílula) */
+    transition: 0.3s;                   /* animação suave ao focar */
 }
 
-/*banner*/
+input:focus {
+    outline: none;                       /* remove a borda azul padrão ao clicar */
+    border-color: #a020f0;              /* muda a borda para roxo ao clicar */
+    box-shadow: 0 0 5px rgba(160, 32, 240, 0.5);   /* brilho roxo ao redor ao clicar */
+}
+
+/*---------------------------------------------- BANNER ----------------------------------------------------*/
 .banner {
-    display: flex;                  /* ativa o modo flex */
-    flex-direction: column;        /* coloca um embaixo do outro */
-
-    justify-content: center;     /* centraliza vertical */
-    align-items: center;        /* centraliza horizontal */
-
-    height: 90vh;             /* ocupa a tela */
-    background: #0d0d0d;
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
+    display: flex;                          /* ativa o modo flexbox */
+    flex-direction: column;                /* coloca os elementos um embaixo do outro */
+    justify-content: center;              /* centraliza verticalmente */
+    align-items: center;                 /* centraliza horizontalmente */
+    height: 60vh;                       /* altura = 60% da altura da tela */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/banner.png");   /* camada escura + imagem de fundo */
+    background-size: cover;                             /* a imagem cobre toda a área */
+    background-position: center;                       /* centraliza a imagem de fundo */
+    color: white;                                     /* texto branco */
+    text-align: center;                              /* texto centralizado */
+    margin: 20px;                                   /* margem externa de 20px */
+    border-radius: 25px;                           /* bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);   /* sombra suave no banner */
 }
+
 .banner h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 50px;                     /* tamanho grande para o título */
+    margin-bottom: 15px;                /* espaçamento inferior de 15px */
 }
+
 .banner p {
-    margin-bottom: 20px;
+    font-size: 18px;                     /* tamanho da fonte do parágrafo */
+    margin-bottom: 25px;                /* espaçamento inferior de 25px */
 }
 
-/*botão no banner*/
 .banner button {
-    padding: 12px 25px;
-    background: #6a0dad;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 12px 30px;                         /* espaçamento interno (12px cima/baixo, 30px laterais) */
+    background: #6a0dad;                       /* fundo roxo escuro */
+    border: none;                             /* remove borda padrão do botão */
+    color: white;                            /* texto branco */
+    cursor: pointer;                        /* cursor vira mãozinha ao passar o mouse */
+    border-radius: 30px;                   /* bordas bem arredondadas */
+    font-size: 16px;                      /* tamanho da fonte */
+    font-weight: bold;                   /* texto em negrito */
+    transition: 0.3s;                   /* tempo da animação de hover */
 }
 
-.destaque h1 {
-    color:  #a020f0;
-    font-size:40px;
-    text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+.banner button:hover {
+    background: #8a2be2;                 /* muda para roxo mais claro ao passar o mouse */
+    transform: scale(1.05);             /* aumenta 5% o tamanho ao passar o mouse */
 }
 
-
-
-
-/*-------------------------------------------livros - produtos-------------------------------------------*/
-.livros {      /*caixa dos livros*/
-    display: flex;                                 /*coloca todos os cards lado a lado*/
-    flex-wrap: wrap;
-    justify-content: center;                     /*centraliza os livros*/
-    gap: 20px;                                  /*espaço ENTRE os cards */
-    padding: 40px;                             /*espaço dentro da seção (afasta das bordas)*/
+/*------------------------------------------- TÍTULOS DAS SEÇÕES -------------------------------------------*/
+.secao {
+    margin: 50px 20px 20px 20px;        /* margem: 50px cima, 20px direita, 20px baixo, 20px esquerda */
 }
 
-.card {         /*cada livro*/
-    background: #1a1a1a;                               /*cor de fundo do card*/
-    padding: 20px;                                    /*espaço interno (não deixa tudo colado)*/
-    border-radius: 10px;                             /*bordas arredondadas*/
-    width: 200px;                                   /*largura fixa do card*/
-    text-align: center;                            /*centraliza o texto dentro dele*/
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);       /*cria uma sombra embaixo do card*/
+.titulo-secao {
+    font-size: 32px;                         /* tamanho da fonte do título */
+    color: #1a1a1a;                         /* cor preta/cinza escuro */
+    position: relative;                    /* permite posicionar elementos filhos (pseudo-elemento) */
+    display: inline-block;                /* faz o título ocupar apenas o espaço do texto */
+    padding-bottom: 10px;                /* espaçamento interno inferior */
+    margin-bottom: 30px;                /* espaçamento externo inferior */
+}
+
+.titulo-secao::after {
+    content: "";                               /* cria um elemento vazio depois do título */
+    position: absolute;                       /* posiciona em relação ao .titulo-secao */
+    bottom: 0;                               /* cola na parte inferior */
+    left: 0;                                /* cola na parte esquerda */
+    width: 60px;                           /* largura de 60px */
+    height: 4px;                          /* altura de 4px (linha fina) */
+    background: linear-gradient(90deg, #6a0dad, #a020f0);   /* gradiente roxo na horizontal */
+    border-radius: 2px;                 /* bordas arredondadas da linha */
+}
+
+/*------------------------------------------- LIVROS (PROMOÇÕES) -------------------------------------------*/
+.livros {
+    display: flex;                          /* coloca os cards lado a lado */
+    flex-wrap: wrap;                       /* quebra linha se não couberem */
+    justify-content: center;              /* centraliza os cards na horizontal */
+    gap: 30px;                           /* espaçamento de 30px entre os cards */
+    padding: 20px 40px;                 /* espaçamento interno (20px cima/baixo, 40px laterais) */
+}
+
+/*------------------------------------------- CATEGORIAS -------------------------------------------*/
+.livroscat {
+    display: flex;                          /* coloca os cards lado a lado */
+    flex-wrap: wrap;                       /* quebra linha se não couberem */
+    justify-content: flex-start;          /* alinha os cards à esquerda */
+    gap: 30px;                           /* espaçamento de 30px entre os cards */
+    padding: 20px 40px;                 /* espaçamento interno (20px cima/baixo, 40px laterais) */
+}
+
+/*------------------------------------------- CARDS DOS LIVROS -------------------------------------------*/
+.card {
+    background: linear-gradient(145deg, #1e1e1e, #141414);   /* gradiente escuro para dar profundidade */
+    padding: 20px;                                          /* espaçamento interno de 20px */
+    border-radius: 15px;                                   /* bordas arredondadas */
+    width: 220px;                                         /* largura fixa de 220px */
+    text-align: center;                                  /* texto centralizado */
+    transition: 0.3s;                                   /* animação suave ao passar o mouse */
+    border: 1px solid rgba(160, 32, 240, 0.2);         /* borda roxa bem fraca */
+}
+
+.card:hover {
+    transform: translateY(-10px);                        /* sobe o card 10px ao passar o mouse */
+    border-color: #a020f0;                              /* borda fica roxa ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.3);   /* sombra roxa ao passar o mouse */
 }
 
 .card img {
-    width: 100%;                         /*imagem ocupa toda largura do card*/
-    height: 250px;
-    object-fit: cover;                 /*ajusta a imagem sem distorcer*/
-    border-radius: 8px;               /* deixa a imagem arredondada*/
-    transition: 0.3s;
-}
-.card img:hover {
-    transform: scale(1.05);
+    width: 100%;                           /* imagem ocupa 100% da largura do card */
+    height: 260px;                        /* altura fixa de 260px */
+    object-fit: cover;                   /* a imagem se ajusta sem distorcer (corta se necessário) */
+    border-radius: 10px;                /* bordas arredondadas na imagem */
 }
 
 .card h3 {
-    margin: 10px 0;
-}
-
-h3 {
-    color: white;
+    color: white;                             /* título em branco */
+    margin: 15px 0 5px;                      /* margem: 15px cima, 0 laterais, 5px baixo */
+    font-size: 18px;                        /* tamanho da fonte */
 }
 
 .card p {
-    color: #ccc;
+    color: #ccc;                         /* texto em cinza claro */
+    font-size: 14px;                    /* tamanho da fonte */
 }
 
+/*------------------------------------------- PREÇOS -------------------------------------------*/
 .preco {
-    color: #a020f0;
-    font-weight: bold;
-    margin: 10px 0;
+    color: #a020f0;                             /* cor roxa para o preço */
+    font-weight: bold;                         /* texto em negrito */
+    font-size: 22px;                          /* tamanho grande da fonte */
+    margin: 10px 0;                          /* margem 10px cima/baixo, 0 laterais */
 }
 
-/*BOTÃO DE COMPRA*/
+.preco-antigo {
+    color: #888;                          /* cor cinza */
+    text-decoration: line-through;       /* risca o texto (efeito de preço antigo) */
+    font-size: 14px;                    /* tamanho menor da fonte */
+}
+
+/*------------------------------------------- BOTÃO DE COMPRA -------------------------------------------*/
 .card button {
-    padding: 10px;
-    background: #6a0dad;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 10px;                                /* espaçamento interno de 10px */
+    background: #6a0dad;                         /* fundo roxo escuro */
+    border: none;                               /* remove borda padrão do botão */
+    color: white;                              /* texto branco */
+    cursor: pointer;                          /* cursor vira mãozinha ao passar o mouse */
+    border-radius: 5px;                      /* bordas arredondadas */
+    width: 100%;                            /* ocupa 100% da largura do card */
+    font-size: 14px;                       /* tamanho da fonte */
+    font-weight: bold;                    /* texto em negrito */
+    transition: 0.3s;                    /* animação suave ao passar o mouse */
+    text-align: center;                 /* texto centralizado */
+    margin-top: auto;                  /* empurra o botão para baixo, alinhando todos */
 }
 
-/*-------------------------------ANIMAÇÃO DOS BOTÕES------------------------------------*/
-.card {
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-8px);
-}
 .card button:hover {
-    background: #8a2be2;
+    background: #8a2be2;                /* muda para roxo mais claro ao passar o mouse */
 }
-.banner button:hover {
-    background: #8a2be2;
-    transform: scale(1.05);
+
+/*------------------------------------------- RODAPÉ -------------------------------------------*/
+footer {
+    background: #0d0d0d;                      /* fundo preto */
+    color: white;                            /* texto branco */
+    text-align: center;                     /* texto centralizado */
+    padding: 30px;                         /* espaçamento interno de 30px */
+    margin-top: 50px;                     /* espaçamento superior de 50px */
 }
-nav a:hover {
-    color: #a020f0;
+
+footer p {
+    margin: 5px 0;                    /* margem 5px cima/baixo, 0 laterais */
+}
+
+/*------------------------------------------- RESPONSIVIDADE (CELULAR/TABLET) -------------------------------------------*/
+@media (max-width: 768px) {                 /* quando a tela for menor que 768px (tablet/celular) */
+    header {
+        flex-direction: column;           /* muda de linha para coluna (empilha os itens) */
+        text-align: center;              /* centraliza o texto */
+        padding: 15px;                  /* reduz o espaçamento interno */
+    }
+
+    nav {
+        justify-content: center;        /* centraliza os links do menu */
+    }
+
+    .banner {
+        height: 50vh;                    /* reduz altura do banner para 50% da tela */
+        margin: 10px;                   /* reduz a margem */
+    }
+
+    .banner h2 {
+        font-size: 28px;                 /* reduz tamanho do título do banner */
+        padding: 0 15px;                /* adiciona espaçamento nas laterais */
+    }
+
+    .livros,
+    .livroscat {
+        justify-content: center;          /* centraliza os cards */
+        padding: 15px;                   /* reduz o espaçamento interno */
+        gap: 20px;                      /* reduz o espaçamento entre cards */
+    }
+
+    .card {
+        width: 160px;                    /* reduz largura do card */
+        padding: 12px;                  /* reduz espaçamento interno */
+    }
+
+    .card img {
+        height: 200px;                  /* reduz altura da imagem */
+    }
+
+    input {
+        width: 90%;                     /* barra de busca ocupa 90% da largura */
+    }
+}
+
+@media (max-width: 480px) {            /* quando a tela for menor que 480px (celular pequeno) */
+    .card {
+        width: 140px;                   /* reduz ainda mais a largura do card */
+    }
+
+    .card h3 {
+        font-size: 14px;                /* reduz tamanho do título */
+    }
+
+    .preco {
+        font-size: 18px;                /* reduz tamanho do preço */
+    }
+}
+
+/*------------------------------------------- SCROLL SUAVE -------------------------------------------*/
+html {
+    scroll-behavior: smooth;            /* faz a rolagem ao clicar em âncoras (#) */
 }
