@@ -139,7 +139,7 @@ site/
 ## 💡 Observações
 
 Utilize este espaço para comentar: 
-      Utilizei as IA's DeepSeek, Gemini, Figma (para ideias visuais) e ChatGPT para me auxiliar no desenvolvimento do meu site. Fiz perguntas sobre como melhorar o layout, alinhar botões, corrigir erros no HTML/CSS, e entender alguns conceitos. A IA me ajudou com sugestões de ideias, explicações e várias correções, mas a implementação final foi feita por mim.
+     
 
 - dificuldades encontradas
         
