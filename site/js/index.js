@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // PASSO 1: Pegar o campo de busca
     const buscaInput = document.querySelector('input');
 
 
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const todosOsCards = document.querySelectorAll('.card');
 
-    // Verificar se encontrou cards
+
     console.log(`Encontrados ${todosOsCards.length} livros`);
 
 
