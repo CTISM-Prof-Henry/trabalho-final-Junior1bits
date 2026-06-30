@@ -14,7 +14,7 @@ O projeto deve ser publicado no **GitHub Pages** e apresentado em aula para o pr
 
 * [x] meu site tem pelo menos um arquivo do tipo `.html` 
 * [x] estou usando CSS externo, em um arquivo separado `.css`
-* [ ] estou usando Javascript externo, em um arquivo separado `.js`
+* [x] estou usando Javascript externo, em um arquivo separado `.js`
 * [x] os arquivos do meu site estão na pasta `site`
 * [x] a pasta `site` tem um arquivo `index.html`, que é a página inicial do meu site; sem esse arquivo, o GitHub Pages 
       não vai funcionar
@@ -81,7 +81,7 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 
 - [ ] `<form>`
 - [x] `<input>`
-- [ ] `<label>`
+- [x] `<label>`
 - [ ] `<textarea>`
 - [x] `<button>`
 
