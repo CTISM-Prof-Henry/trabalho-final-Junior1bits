@@ -29,7 +29,7 @@ Descreva abaixo **sobre o que se trata seu site:**
 
 - **Tema: Livraria online (BookZone)**
 - **Público-alvo: Leitores de todas as idades**
-- **Funcionalidades: Visualização de livros em promoção, categorias (Ficção, Drama, Lançamentos), cards interativos com hover, barra de busca (visual), navegação por âncoras**
+- **Funcionalidades: Visualização de livros em promoção, categorias (Ficção, Drama, Lançamentos), cards interativos com hover, barra de busca, navegação por âncoras**
 
 ## Uso de IA
 
@@ -42,6 +42,7 @@ Se você utilizou uma IA, marque a caixa abaixo e preencha os campos:
 * **Forma de utilização da IA:**
   * [x] fiz perguntas pontuais à IA, mas eu programei o código do meu site
   * [ ] dei um prompt para a IA, ela me deu um código e eu colei o código nos arquivos do meu site
+        
 
 ## 🧩 Componentes HTML utilizados
 
