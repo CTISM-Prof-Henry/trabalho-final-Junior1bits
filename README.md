@@ -102,10 +102,10 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 ## ⚙️ JavaScript
 
 - [ ] Manipulação do DOM
-- [ ] Eventos (`click`, `submit`, etc.)
+- [x] Eventos (`click`, `submit`, etc.)
 - [ ] Validação de formulário
 - [ ] Alteração dinâmica de conteúdo
-- [ ] Uso de funções
+- [x] Uso de funções
 - [ ] Uso de arrays ou objetos
 - [ ] Uso de `fetch` ou API externa
 - [ ] local Storage
@@ -142,7 +142,10 @@ Utilize este espaço para comentar:
      
 
 - dificuldades encontradas
+  Encontrei dificuldade na construção e na organização de elementos, principalmente na centralização de alguns itens e forte dificuldade na parte de javascript. O que tem no meu javascript tem uma grande origem de ajuda externa.
         
 - decisões de design
+  Quis começar com um site de camisas, mas no decorrer encontrei dificuldade em alguns itens e decidi abandonar a ideia por necessitar alguns itens que eu queria fazer mas não conseguia colocar. Aí minha namorada por ser leitora sugeriu fazer uma loja de livros, no qual vi uma boa oportunidade de fazer um bom trabalho. A identidade visual do site é de autoria própria, apenas o banner foi gerado por IA. 
   
 - melhorias que podem ser feitas no futuro
+  Uma página específica e detalhada para cada livro, carrinho de compras e algumas animações no corpo do código.
