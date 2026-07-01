@@ -109,7 +109,7 @@ input {
 }
 
 /*------------------------------------------- LIVROS (PROMOÇÕES) -------------------------------------------*/
-.livros {
+.livros_promoções {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -118,6 +118,14 @@ input {
 }
 
 /*------------------------------------------- CARDS DOS LIVROS -------------------------------------------*/
+.livros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 20px 40px;
+}
+
 .card {
     background: #141414;
     padding: 20px;
