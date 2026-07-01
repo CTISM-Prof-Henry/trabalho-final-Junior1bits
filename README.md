@@ -72,7 +72,7 @@ Marque com `[x]` os elementos que **foram implementados no seu site**. Você nã
 - [x] Títulos (`h1`, `h2`, `h3`, etc.)
 - [x] Parágrafos (`p`)
 - [x] Imagens (`img`)
-- [ ] Links (`a`)
+- [x] Links (`a`)
 - [ ] Listas:
   - [ ] `ul`
   - [ ] `ol`
