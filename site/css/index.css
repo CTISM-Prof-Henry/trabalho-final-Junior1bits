@@ -200,13 +200,17 @@ footer p {
     margin: 5px 0;
 }
 
-/*------------------------------------------- (CELULAR/TABLET) -------------------------------------------*/
+/*------------------------------------------- (CELULAR) -------------------------------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
         flex-direction: column;
         text-align: center;
         padding: 15px;
+    }
+
+    body {
+        background-color: darkgray;
     }
 
     nav {
